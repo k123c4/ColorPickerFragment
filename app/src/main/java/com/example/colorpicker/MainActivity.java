@@ -13,6 +13,7 @@ import android.view.SurfaceControl;
 public class MainActivity extends AppCompatActivity implements OnMessageSendListener {
 
     FragmentManager fg;
+    ColorsViewModel model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

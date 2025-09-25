@@ -16,6 +16,7 @@ import android.widget.GridLayout;
 import android.widget.Toast;
 
 public class ColorPickFragment extends Fragment {
+    ColorsViewModel model;
 
     private String[] colors;
     private GridLayout grid;

@@ -12,8 +12,8 @@ public class ColorsViewModel extends ViewModel {
         colorsll.setValue(l);
     }
 
-    public ColorsViewModel(MutableLiveData<LinkedList<String>> colorsll) {
-        this.colorsll = colorsll;
+    public ColorsViewModel() {
+        this.colorsll = new MutableLiveData<>();
     }
 
     public LinkedList<String> getcolors(){
