@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.ViewModel;
+import androidx.lifecycle.ViewModelProvider;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,13 +14,14 @@ import android.view.SurfaceControl;
 public class MainActivity extends AppCompatActivity implements OnMessageSendListener {
 
     FragmentManager fg;
-    ColorsViewModel model;
+    ColorsViewModel ColorsModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
+            ColorsModel = new ViewModelProvider(this).get(ColorsViewModel.class);
             fg = getSupportFragmentManager();
             FragmentTransaction trans = fg.beginTransaction();
             ColorPickFragment cf = new ColorPickFragment();
