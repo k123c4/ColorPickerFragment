@@ -21,7 +21,7 @@ public class ColorListFragment extends Fragment {
         // Required empty public constructor
     }
     // TODO: Rename and change types and number of parameters
-    public static ColorListFragment newInstance(String param1, String param2) {
+    public static ColorListFragment newInstance() {
         ColorListFragment fragment = new ColorListFragment();
         return fragment;
     }
